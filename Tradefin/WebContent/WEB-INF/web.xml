@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>First</display-name>
+  <servlet>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>MyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>sendassetfrom</servlet-name>
+    <servlet-class>com.mphasis.tradefin.controllers.SendAssetFrom</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>signrawtransaction</servlet-name>
+    <servlet-class>com.mphasis.tradefin.controllers.SignRawTransaction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>sendrawtransaction</servlet-name>
+    <servlet-class>com.mphasis.tradefin.controllers.SendRawTransaction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sendassetfrom</servlet-name>
+    <url-pattern>/SendAssetFrom</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>signrawtransaction</servlet-name>
+    <url-pattern>/SignRawTransaction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sendrawtransaction</servlet-name>
+    <url-pattern>/SendRawTransaction</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+  	<welcome-file>RegistrationForm.html</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

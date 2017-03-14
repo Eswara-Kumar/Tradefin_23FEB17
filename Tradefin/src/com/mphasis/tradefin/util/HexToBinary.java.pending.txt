@@ -1,0 +1,63 @@
+package com.mphasis.tradefin.util;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Reader;
+import java.io.Writer;
+
+public class HexToBinary {
+
+	public static void hexToBinary(InputStream is, OutputStream os) {
+        Reader reader = new BufferedReader(new InputStreamReader(is));
+
+        try {
+            char buffer[] = new char[2];
+
+            while (reader.read(buffer) != -1) {
+                os.write((Character.digit(buffer[0], 16) << 4)
+                        + Character.digit(buffer[1], 16));
+            }
+        
+        } catch (IOException e) {
+            System.err.println("An error occurred");
+        }
+    }
+    
+    public static void main(final String[] args) throws IOException
+    {
+    	
+    	 if (args.length < 2) {
+             System.out.println("Please provide input and output files");
+             System.exit(0);
+         }
+  
+         String inputHexaFile = args[0];
+         String outputBinaryFile = args[1];
+  
+        try
+        {
+            FileInputStream fis = new FileInputStream(new File(inputHexaFile));
+            OutputStream fos = new FileOutputStream(new File(outputBinaryFile));
+
+            hexToBinary(fis, fos);
+            
+            fos.flush();
+            fos.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    
+}

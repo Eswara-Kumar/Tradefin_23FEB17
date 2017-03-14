@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration Form</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/blockchain.css">
+		
+		<!-- ------------------- date picker code : start -------------------------- -->
+		<link href="css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script>
+		  $(document).ready(function() {
+		    $("#TenorMaturityDate").datepicker();
+		  });
+		</script>
+		<!-- ------------------- date picker code : end -------------------------- -->
+
+	</head>
+		<body>
+		
+			<!-- ------------------------------ nav bar : start --------------------------------- -->
+			<nav class="navbar navbar-inverse navbar-static-top borderBottom">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img src="images/SBI-Logo.jpg" class="brandLogoImage1" style="width: 290px; height: 75px;"/> <!-- ref: http://www.northeastacademy.in/payment-gateway -->
+					</a>
+				</div>
+				<div id="navbar">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;&nbsp; John Doe <span class="caret"></span></a>
+						  <ul class="dropdown-menu">
+							<li><a href="#">Link 1</a></li>
+						  </ul>
+						</li>
+						
+						
+					</ul>
+					<ul class="nav navbar-nav alignRight">
+						<li><a href="#">Logged in at 12:30pm</a></li>
+					</ul>
+				</div>			
+			</nav>
+			<!-- ------------------------------ nav bar : end --------------------------------- -->
+			
+
+
+
+
+			<!-- ------------------------------ page locator : start --------------------------------- -->
+			<div class="pageLocator">
+				<span>Home &nbsp; > &nbsp;</span> 
+				<span class="active">Registration Form</span>
+			</div>
+			<!-- ------------------------------ page locator : end --------------------------------- -->
+
+
+
+			
+			
+			<!-- ------------------------------ Loading image : start --------------------------------- -->
+			<script type="text/javascript"> 
+				/*function showHide(){ 
+					alert('hi');
+					//create an object reference to the div containing images 
+					var oimageDiv=document.getElementById('searchingimageDiv') 
+					//set display to inline if currently none, otherwise to none 
+					oimageDiv.style.display=(oimageDiv.style.display=='none')?'inline':'none' 
+				}*/
+				
+				function showLoading() {
+				    document.getElementById('loadingmsg').style.display = 'block';
+				    document.getElementById('loadingover').style.display = 'block';
+				}
+			</script>
+
+			<style type="text/css">
+			      #loadingmsg {
+				      color: black;
+				      background: #fff; 
+				      padding: 10px;
+				      position: fixed;
+				      top: 25%;
+				      left: 35%;
+				      z-index: 100;
+				      margin-right: -20%;
+				      margin-bottom: -20%;
+			      }
+			      #loadingover {
+				      background: black;
+				      z-index: 99;
+				      width: 100%;
+				      height: 100%;
+				      position: fixed;
+				      top: 0;
+				      left: 0;
+				      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+				      filter: alpha(opacity=80);
+				      -moz-opacity: 0.8;
+				      -khtml-opacity: 0.8;
+				      opacity: 0.8;
+			    }
+			</style>
+
+			<!-- <div id="searchingimageDiv" style="display:none"> <img id="searchingimage1" src="images/page-loader.gif" alt="" /> </div>-->
+			<div id='loadingmsg' style='display: none;'><b>Registering the Exporter, Importer, <br>Ports, Banks, Assets, <br>etc. in Blockchain. <br> Please wait...<b><br> <img id="searchingimage1" src="images/page-loader.gif" alt="" /> </div>
+			<div id='loadingover' style='display: none;'></div>
+			<!-- ------------------------------ Loading image : end --------------------------------- -->
+			
+
+			<!-- ------------------------------ main container : start --------------------------------- -->
+			<div class="outerContainer">
+			<div class="container">
+				
+				</br>
+				
+				
+				<div class="uploadFormSection">
+					<table>
+						<tr>
+							<td colspan=2>
+								<div class="highlights"> 
+									Entities:	
+								</div>
+							</td>
+						</tr>
+						
+						<tr>
+							<td colspan=2>
+								<table>
+											<tr>
+												<td style="width: 35%">
+													<label class="lableTrdFin" for="ExporterRef">Exporter:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="Exporter" value="J.K. Exporter" />
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" for="ExporterRef">Importer:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="Importer" value="T.G. Importer" />
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" for="ExporterRef">Exporter Port:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="Port1" value="Port of Chennai, India" />
+													<!-- <input type="text" class="inputFieldsTrdFin" id="Transporter1" value="Cosco India Logistics, Chennai" /> -->
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" for="ExporterRef">Importer Port:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="Port2" value="Port of Haiphong, Vietnam" />
+													<!-- <input type="text" class="inputFieldsTrdFin" id="Transporter2" value="Cosco India Logistics, Mumbai" /> -->
+												</td>
+											</tr>
+											
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" for="ExporterRef">Exporter Bank:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="ExporterBank" value="S.B.I., Chennai" />
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" for="ExporterRef">Importer Bank:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="ImporterBank" value="Bank of Haiphong., Haiphong" />
+													<!-- <input type="text" class="inputFieldsTrdFin" id="ImporterBank" value="S.B.M., Mumbai" /> -->
+												</td>
+											</tr>
+											
+											
+								</table>
+							</td>
+						</tr>
+						
+						<tr>
+							<td colspan=2>
+								<div class="highlights"> 
+									Goods:	
+								</div>
+							</td>
+						</tr>
+						
+						<tr>
+							<td colspan=2>
+								<table>
+											<tr>
+												<td  style="width: 35%">
+													<label class="lableTrdFin" for="Goods">Goods:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="Goods" value="CHILLIES" />
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" for="GoodsQuantity">Goods Quantity:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="GoodsQuantity" value="45.108" />
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" for="AmountNegotiated">Amount Negotiated (LC CCY):</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="AmountNegotiated" value="110250" />
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" for="EEFCAmountInTXNCCY">EEFC Amount in TXN CCY:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="EEFCAmountInTXNCCY" value="0" />
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" for="EEFCAmountInTXNCCYForConversion">EEFC Amount in TXN CCY <br> for conversion in other currency:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="EEFCAmountInTXNCCYForConversion" value="0" />
+												</td>
+											</tr>
+											
+								</table>
+							</td>
+						</tr>	
+						
+						<tr>
+							<td colspan=2>
+								<div class="highlights"> 
+									Multisigs:	
+								</div>
+							</td>
+						</tr>
+						
+						<tr>
+							<td colspan=2>
+								<table>
+											<tr>
+												<td  style="width: 35%">
+													<label class="lableTrdFin" ><b>Multi signature account 1:</b></label>
+												</td>
+												<td>
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+												</td>
+												<td>
+													<label class="lableTrdFin" >J.K. Exports</label>
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+												</td>
+												<td>
+													<label class="lableTrdFin" >T.G. Imports</label>
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+												</td>
+												<td>
+													<label class="lableTrdFin" >Port of Chennai, India</label>
+													<!-- <label class="lableTrdFin" >Cosco India Logistics, Chennai</label> -->
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" ><b>Multi signature account 2:</b></label>
+												</td>
+												<td>
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+												</td>
+												<td>
+													<label class="lableTrdFin" >J.K. Exports</label>
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+												</td>
+												<td>
+													<label class="lableTrdFin" >T.G. Imports</label>
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+												</td>
+												<td>
+													<label class="lableTrdFin" >Port of Haiphong, Vietnam</label>
+													<!-- <label class="lableTrdFin" >Cosco India Logistics, Mumbai</label> -->
+												</td>
+											</tr>
+											
+											
+								</table>
+							</td>
+						</tr>	
+							
+						<tr>
+							<td colspan=2>
+								<div class="highlights"> 
+									Other details:	
+								</div>
+							</td>
+						</tr>
+						
+						<tr>
+							<td colspan=2>
+								<table>
+											<tr>
+												<td  style="width: 35%">
+													<label class="lableTrdFin" for="TenorDays">Tenor Days:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="TenorDays" value="3" />
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" for="TenorMaturityDate">Tenor Maturity Date:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="TenorMaturityDate" value="06/30/2017" />
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" for="CountryOriginId">Country of Origin Id:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="CountryOriginId" value="INDIA" />
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<label class="lableTrdFin" for="CountryOriginName">Country of Origin Name:</label>
+												</td>
+												<td>
+													<input type="text" class="inputFieldsTrdFin" id="CountryOriginName" value="India" />
+												</td>
+											</tr>
+											
+								</table>
+							</td>
+						</tr>	
+						
+							
+					</table>
+
+
+
+					<!--					
+					<div class="form-group">
+						<label class="lable" for="uploadingFile">Select files to upload</label><br/>
+						<input type="text" class="inputFields1" id="uploadingFile" placeholder="passport.pdf" />
+						<button class="fileButton" id="fileButton">Browse</button>
+					</div>
+					<div class="addoc">
+						<span class="active">Add another document</span>
+					</div>
+					-->
+
+
+					<hr/>
+					<div class="">
+						<center>
+							<button class="fileButton" id="fileButton" onclick="showLoading(); document.location.href='RegistrationFormAction'">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<button class="fileButton" id="fileButton">Cancel</button>
+						</center>
+					</div>
+					<br/>
+					<br/>
+					<br/>
+				</div>
+				
+				
+			</div>
+			</div>
+			<!-- ------------------------------ main container : end --------------------------------- -->
+			
+
+
+			<!-- ------------------------------ footer : start --------------------------------- -->
+			<footer class="not-absolute"> 
+				Copyrights 2016. All Rights Reserved.
+			</footer>
+			<!-- ------------------------------ footer : end --------------------------------- -->
+
+		</body>	
+
+</html>

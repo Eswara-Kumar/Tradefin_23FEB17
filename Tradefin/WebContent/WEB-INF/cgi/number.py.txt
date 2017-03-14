@@ -1,0 +1,33 @@
+
+#http://localhost:8080/Tradefin/cgi-bin/number.py?a=1&b=2
+
+import cgitb
+cgitb.enable()
+
+import cgi
+
+
+
+print "Content-type: text/html\n\n";
+print "Hello, world!\n"
+
+
+
+for i in range(1,13):
+    print(i)
+    
+    
+    
+
+
+
+#print "Content-Type: text/plain;charset=utf-8"
+print
+form = cgi.FieldStorage()
+i = int(form.getvalue('a'))
+j = int(form.getvalue('b'))
+
+print "i ="+str(i)
+print "j ="+str(j)
+
+    

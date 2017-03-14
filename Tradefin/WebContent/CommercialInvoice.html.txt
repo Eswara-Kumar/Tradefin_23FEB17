@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Commercial Invoice</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/blockchain.css">
+		
+		<!-- ------------------- date picker code : start -------------------------- -->
+		<link href="css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	        <script type="text/javascript" src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script>
+		  $(document).ready(function() {
+		    $("#InvoiceDate").datepicker();
+		    $("#BuyersOrderDate").datepicker();
+		  });
+		</script>
+		<!-- ------------------- date picker code : end -------------------------- -->
+
+	</head>
+		<body>
+		
+			<!-- ------------------------------ nav bar : start --------------------------------- -->
+			<nav class="navbar navbar-inverse navbar-static-top borderBottom">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img src="images/mphasis_logo.png" class="brandLogoImage1"/>
+					</a>
+				</div>
+				<div id="navbar">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;&nbsp; John Doe <span class="caret"></span></a>
+						  <ul class="dropdown-menu">
+							<li><a href="#">Link 1</a></li>
+						  </ul>
+						</li>
+						
+						
+					</ul>
+					<ul class="nav navbar-nav alignRight">
+						<li><a href="#">Logged in at 12:30pm</a></li>
+					</ul>
+				</div>			
+			</nav>
+			<!-- ------------------------------ nav bar : end --------------------------------- -->
+			
+
+
+
+
+			<!-- ------------------------------ page locator : start --------------------------------- -->
+			<div class="pageLocator">
+				<span>Home &nbsp; > &nbsp;</span> 
+				<span class="active">Commercial Invoice</span>
+			</div>
+			<!-- ------------------------------ page locator : end --------------------------------- -->
+
+
+
+
+
+			<!-- ------------------------------ main container : start --------------------------------- -->
+			<div class="outerContainer">
+			<div class="container">
+				<!--<div class="navHeading">
+					<span class="alignLeft sideHeading">Upload Documents</span>
+				</div>-->
+
+				<div class="uploadFormSection">
+					<table>
+						<tr>
+							<td>
+								<table>
+									<tr>
+										<td style="width:150px;">
+											<label class="lableTrdFin" for="Consignor">Consignor:</label>
+										</td>
+										<td>
+											<textarea class="TextareaTrdFin form-controlTrdFin" rows="4" id="Consignor" placeholder="Provide the details of Consignor"></textarea>
+										</td>
+									</tr>
+								</table>
+
+							</td>
+							<td>
+								<table>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="InvoiceNo">Invoice No:</label>
+										</td>
+										<td>
+											<!--<input type="text" class="inputFieldsTrdFin" id="InvoiceNo" placeholder="" />-->
+											32/1276/17
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="InvoiceDate">Date:</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="InvoiceDate" placeholder=" **** Click here for Calendar ***" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="ExporterRef">Exporter Ref:</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="ExporterRef" placeholder="" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="InvoiceNo">Buyer's Order No:</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="InvoiceNo" placeholder="" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="BuyersOrderDate">Buyer's Order Date:</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="BuyersOrderDate" placeholder=" **** Click here for Calendar ***" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="OtherReferences">Other Reference(s):</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="OtherReferences" placeholder="" />
+										</td>
+									</tr>
+								</table>
+
+
+
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan=2>
+								<hr/>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<table>
+									<tr>
+										<td style="width:150px;">
+											<label class="lableTrdFin" for="Consignee">Consignee:</label>
+										</td>
+										<td>
+											<textarea class="TextareaTrdFin form-controlTrdFin" rows="4" id="Consignee" placeholder="Provide the details of Consignee"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="CountryOfOriginOfGoods">Country of Origin of Goods:</label>
+										</td>
+										<td>
+											<select class="inputFieldsTrdFin" id="CountryOfOriginOfGoods" placeholder="" />
+												<option value="1">India</option>
+												<option value="2">Indonesia</option>
+												<option value="3">Japan</option>
+												<option value="4">Malaysia</option>
+												<option value="5">U.S.A</option>
+												<option value="6">U.K.</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td>
+								<table>
+									<tr>
+										<td style="width:195px;">
+											<label class="lableTrdFin" for="BuyerOther">Buyer(if other than consignee):</label>
+										</td>
+										<td>
+											<textarea class="TextareaTrdFin form-controlTrdFin" rows="4" id="BuyerOther" placeholder="Provide the details of Buyer(if other than consignee)"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="CountryOfFinalDestination">Country of Final Destination:</label>
+										</td>
+										<td>
+											<select class="inputFieldsTrdFin" id="CountryOfFinalDestination" placeholder="" />
+												<option value="1">Indonesia</option>
+												<option value="2">Japan</option>
+												<option value="3">Malaysia</option>
+												<option value="4">U.S.A</option>
+												<option value="5">U.K.</option>
+												<option value="6">India</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan=2>
+								<hr/>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<table>
+									<tr>
+										<td style="width:150px;">
+											<label class="lableTrdFin" for="PreCarriageBy">Pre-Carriage by:</label>
+										</td>
+										<td>
+											<!--<input type="text" class="inputFieldsTrdFin" id="PreCarriageBy" placeholder="" />-->
+											<select class="inputFieldsTrdFin" id="PreCarriageBy" placeholder="" />
+												<option value="1">Sea</option>
+												<option value="2">Air</option>
+												<option value="3">Road</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="PlaceOfReceiptByPreCarrier">Place of Receipt by Pre-Carrier:</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="PlaceOfReceiptByPreCarrier" placeholder="" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="FlightNo">Vessel/Flight No:</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="FlightNo" placeholder="" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="PortOfLoading">Port of Loading:</label>
+										</td>
+										<td>
+											<select class="inputFieldsTrdFin" id="PortOfLoading" placeholder="" />
+												<option value="1">Nhava Sheva, India</option>
+												<option value="2">Vizag, India</option>
+												<option value="3">Goa, India</option>
+												<option value="6">Jakarta, Indonesia</option>
+												<option value="4">Abc Port, U.S.A</option>
+												<option value="5">Def Port, U.K.</option>
+											</select>
+
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="PortOfDischarge">Port of Discharge:</label>
+										</td>
+										<td>
+											<select class="inputFieldsTrdFin" id="PortOfDischarge" placeholder="" />
+												<option value="1">Jakarta, Indonesia</option>
+												<option value="2">Nhava Sheva, India</option>
+												<option value="3">Vizag, India</option>
+												<option value="6">Goa, India</option>
+												<option value="4">Abc Port, U.S.A</option>
+												<option value="5">Def Port, U.K.</option>
+
+											</select>
+
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="FinalDestination">Final Destination:</label>
+										</td>
+										<td>
+											<select class="inputFieldsTrdFin" id="FinalDestination" placeholder="" />
+												<option value="1">Jakarta, Indonesia</option>
+												<option value="2">Nhava Sheva, India</option>
+												<option value="3">Vizag, India</option>
+												<option value="6">Goa, India</option>
+												<option value="4">Abc Port, U.S.A</option>
+												<option value="5">Def Port, U.K.</option>
+
+											</select>
+
+										</td>
+									</tr>
+								</table>
+
+							</td>
+							<td>
+								<table>
+									<tr>
+										<td style="width:195px;">
+											<label class="lableTrdFin" for="TermsOfDeliveryAndPayment">Terms of Delivery and Payment:</label>
+										</td>
+										<td>
+											<textarea class="TextareaTrdFin form-controlTrdFin" rows="4" id="TermsOfDeliveryAndPayment" placeholder="Terms of Delivery and Payment"></textarea>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan=2>
+								<hr/>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td colspan=2>
+								<table>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="ContainerNo">Marks & Nos / Container No:</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="ContainerNo" placeholder="" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="DescriptionOfGoods">No. & Kind of Pkgs	Description of Goods:</label>
+										</td>
+										<td>
+											<textarea style="height:250px; width:500px;" class="TextareaTrdFin form-controlTrdFin" rows="4" id="DescriptionOfGoods" placeholder="Description of Goods"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="Quantity">Quantity:</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="Quantity" placeholder="" value="45559.954"/>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="RateInUsd">Rate in USD:</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="RateInUsd" placeholder="" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="AmountInUsd">Amount in USD:</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="AmountInUsd" placeholder="" />
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan=2>
+								<hr/>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan=2>
+								<table>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="NetWeight">Net Weight:</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="NetWeight" placeholder="" value="7699.360"/>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="lableTrdFin" for="GrossWeight">Gross Weight:</label>
+										</td>
+										<td>
+											<input type="text" class="inputFieldsTrdFin" id="GrossWeight" placeholder="" value="7894.660"/>
+										</td>
+									</tr>
+
+								</table>
+								<br/>
+								B/L/AWB/FCR No TML/29141/JKT/1016 <br/> Date. dd.mm.2017
+							</td>
+						</tr>
+
+					</table>
+
+
+
+					<!--					
+					<div class="form-group">
+						<label class="lable" for="uploadingFile">Select files to upload</label><br/>
+						<input type="text" class="inputFields1" id="uploadingFile" placeholder="passport.pdf" />
+						<button class="fileButton" id="fileButton">Browse</button>
+					</div>
+					<div class="addoc">
+						<span class="active">Add another document</span>
+					</div>
+					-->
+
+
+					<hr/>
+					<div class="">
+						<center>
+							<button class="fileButton" id="fileButton">Submit</button>
+							<button class="fileButton" id="fileButton">Cancel</button>
+						</center>
+					</div>
+					<br/>
+					<br/>
+					<br/>
+				</div>
+				
+				
+			</div>
+			</div>
+			<!-- ------------------------------ main container : end --------------------------------- -->
+			
+
+
+			<!-- ------------------------------ footer : start --------------------------------- -->
+			<footer class="not-absolute"> 
+				Copyrights 2016. All Rights Reserved.
+			</footer>
+			<!-- ------------------------------ footer : end --------------------------------- -->
+
+		</body>	
+
+</html>

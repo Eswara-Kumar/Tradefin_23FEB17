@@ -1,0 +1,90 @@
+package com.mphasis.tradefin.controllers;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.UUID;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import com.mphasis.tradefin.rpc.ChainConnector;
+
+/**
+ * Servlet implementation class GetAddressBalances
+ */
+@WebServlet("/GetAddressBalances")
+public class GetAddressBalances extends HttpServlet {
+	//private static final long serialVersionUID = 1L;
+	private static final String COMMAND_GET_ADDRESS_BALANCES = "getaddressbalances";
+	
+	public JSONArray getAddressBalances(String address) {
+        String[] params = { address };
+        ChainConnector objChainConnector = new ChainConnector();
+        JSONObject json = objChainConnector.invokeRPC(UUID.randomUUID().toString(), COMMAND_GET_ADDRESS_BALANCES, Arrays.asList(params));
+        return (JSONArray)json.get("result");
+        
+    }
+	
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		response.setContentType("text/html");//setting the content type  
+	    PrintWriter pw=response.getWriter();//get the stream to write the data
+	    
+	    String address= request.getParameter("address");
+	    String assetRef= request.getParameter("assetRef");
+	  
+	    pw.println("<html><body>");  
+	    pw.println("Welcome to getaddressbalances servlet");
+	    
+	    
+	    pw.println("</br></br>###### testing rpc on multichain:getaddressbalances");
+    	JSONArray objJson1 = /*objRpctest.*/getAddressBalances(address);
+    	pw.println("</br></br>#### size of output:"+objJson1.size());
+    	pw.println("</br></br>####" + objJson1.toJSONString());
+    	//pw.println("####" + objJson1.toString());
+    	
+    	boolean present = false;
+    	for(Object obj : objJson1.toArray()) {
+    		
+    		JSONObject objJson2 = (JSONObject) obj;
+        	String strAssetref= (String) objJson2.get("assetref");
+        	//JSONArray objJsonAssetRef = (JSONObject) objJson1.get(assetref);
+        	pw.println("</br></br>#### size of output:"+strAssetref.length());
+        	pw.println("</br></br>#### assetref:" + strAssetref);
+    		
+        	
+        	
+        	if(assetRef.equals(strAssetref)) {
+        		present = true;
+        		break;
+        	}
+        }
+    	
+    	if(present){
+    		pw.println("</br></br>#### true");
+    	}else{
+    		pw.println("</br></br>#### false");
+    	}
+    	
+		
+    	
+ 
+    	pw.println("</body></html>");  
+	    pw.close();//closing the stream 
+    	
+	    
+	}
+
+}
